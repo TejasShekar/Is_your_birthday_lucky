@@ -8,7 +8,7 @@
   font-family: "Fuzzy Bubbles", cursive;
 }
 
-main{
+main {
   padding-top: 2rem;
 }
 .container {
@@ -28,7 +28,7 @@ p {
   text-align: center;
   font-size: large;
 }
-input{
+input {
   width: 60%;
   display: block;
   margin: 1rem auto;

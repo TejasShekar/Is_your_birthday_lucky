@@ -25,8 +25,8 @@ function checkLuck() {
     } else {
       output.innerHTML = "Sorry, your birthdate isn't lucky 😔";
     }
-  }else{
-    alert("Fill all the required inputs")
+  } else {
+    alert("Fill all the required inputs");
   }
 }
 checkBtn.addEventListener("click", checkLuck);
