@@ -40,6 +40,7 @@ input {
   padding: 0.3rem;
   text-align: center;
   border-radius: 1rem;
+  border-color: orangered;
 }
 button {
   font-size: medium;
