@@ -2,10 +2,16 @@ const dateOfBirth = document.querySelector("#dob");
 const luckyNum = document.querySelector("#lucky-num");
 const checkBtn = document.querySelector("#check-btn");
 const output = document.querySelector("#output");
+const main = document.querySelector("#container");
+const noticeBtn = document.querySelector("#notice-btn");
+const notice = document.querySelector("#notice");
 
-alert(
-  "This website is created for fun. No data is stored !"
-);
+main.style.display = "none";
+
+noticeBtn.addEventListener("click", function showMain() {
+  main.style.display = "block";
+  notice.style.display = "none";
+});
 
 function sumOfDOB(dob) {
   let sum = 0;
@@ -27,7 +33,7 @@ function checkLuck() {
     }
   } else {
     output.style.color = "red";
-    output.innerHTML="Fill all the required inputs";
+    output.innerHTML = "Fill all the required inputs";
   }
 }
 checkBtn.addEventListener("click", checkLuck);
