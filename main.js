@@ -4,7 +4,7 @@ const checkBtn = document.querySelector("#check-btn");
 const output = document.querySelector("#output");
 
 alert(
-  "This website is built for learning Javascript with fun. No data is stored !"
+  "This website is created for fun. No data is stored !"
 );
 
 function sumOfDOB(dob) {
@@ -26,7 +26,8 @@ function checkLuck() {
       output.innerHTML = "Sorry, your birthdate isn't lucky 😔";
     }
   } else {
-    alert("Fill all the required inputs");
+    output.style.color = "red";
+    output.innerHTML="Fill all the required inputs";
   }
 }
 checkBtn.addEventListener("click", checkLuck);
