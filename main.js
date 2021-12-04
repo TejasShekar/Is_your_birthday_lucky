@@ -3,22 +3,30 @@ const luckyNum = document.querySelector("#lucky-num");
 const checkBtn = document.querySelector("#check-btn");
 const output = document.querySelector("#output");
 
+alert(
+  "This website is built for learning Javascript with fun. No data is stored !"
+);
+
 function sumOfDOB(dob) {
   let sum = 0;
   dob = dob.replaceAll("-", "");
   for (let i = 0; i < dob.length; i++) {
     sum = sum + Number(dob.charAt(i));
   }
-  return(sum);
+  return sum;
 }
 
 function checkLuck() {
-  const dob = dateOfBirth.value;
-  const sum = sumOfDOB(dob);
-  if(sum%luckyNum.value===0){
-      output.innerHTML="Your birthdate is lucky, Awesome !🥳";
+  if (dateOfBirth.value && luckyNum.value) {
+    const dob = dateOfBirth.value;
+    const sum = sumOfDOB(dob);
+    if (sum % luckyNum.value === 0) {
+      output.innerHTML = "Your birthdate is lucky, Awesome !🥳";
+    } else {
+      output.innerHTML = "Sorry, your birthdate isn't lucky 😔";
+    }
   }else{
-      output.innerHTML="Sorry, your birthdate isn't lucky 😔";
+    alert("Fill all the required inputs")
   }
 }
 checkBtn.addEventListener("click", checkLuck);
