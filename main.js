@@ -27,13 +27,13 @@ function checkLuck() {
     const dob = dateOfBirth.value;
     const sum = sumOfDOB(dob);
     if (sum % luckyNum.value === 0) {
-      output.innerHTML = "Your birthdate is lucky, Awesome !🥳";
+      output.innerText = "Your birthdate is lucky, Awesome !🥳";
     } else {
-      output.innerHTML = "Sorry, your birthdate isn't lucky 😔";
+      output.innerText = "Sorry, your birthdate isn't lucky 😔";
     }
   } else {
     output.style.color = "red";
-    output.innerHTML = "Fill all the required inputs";
+    output.innerText = "Fill all the required inputs";
   }
 }
 checkBtn.addEventListener("click", checkLuck);
