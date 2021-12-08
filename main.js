@@ -23,7 +23,7 @@ function sumOfDOB(dob) {
 }
 
 function checkLuck() {
-  if (dateOfBirth.value && luckyNum.value) {
+  if ( dateOfBirth.value  && Number(luckyNum.value) > 0) {
     const dob = dateOfBirth.value;
     const sum = sumOfDOB(dob);
     if (sum % luckyNum.value === 0) {
@@ -33,7 +33,7 @@ function checkLuck() {
     }
   } else {
     output.style.color = "red";
-    output.innerText = "Fill all the required inputs";
+    output.innerText = "Please enter valid inputs";
   }
 }
 checkBtn.addEventListener("click", checkLuck);
